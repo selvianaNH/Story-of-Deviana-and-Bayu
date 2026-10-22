@@ -4,160 +4,497 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Undangan Pernikahan Deviana & Bayu</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..700;1,400..700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <meta name="description" content="Undangan pernikahan Deviana & Bayu">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..700;1,400..700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --bg: #f4f0ee;
+            --card: #fffdfc;
+            --soft: #f7f1ee;
+            --gold: #b7935a;
+            --gold-dark: #8e6f39;
+            --navy: #2a4055;
+            --text: #3d3d3d;
+            --muted: #7b7b7b;
+            --line: #e8ddd5;
+            --shadow: 0 12px 30px rgba(46, 41, 36, 0.12);
+        }
+
         html {
             scroll-behavior: smooth;
         }
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
+
         body {
             font-family: 'Poppins', sans-serif;
-            background-color: #f0f4f8;
-            color: #333;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            background: linear-gradient(180deg, #f3eee9 0%, #f7f3f1 100%);
+            color: var(--text);
             min-height: 100vh;
         }
-        .container {
-            width: 100%;
+
+        .page {
             max-width: 480px;
-            background: #ffffff;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            overflow: hidden;
-            position: relative;
+            margin: 0 auto;
+            background: var(--card);
+            box-shadow: var(--shadow);
+            min-height: 100vh;
         }
+
         section {
-            padding: 40px 20px;
+            padding: 52px 22px;
             text-align: center;
-            border-bottom: 1px solid #eee;
         }
-        h1, h2 {
+
+        h1, h2, h3 {
             font-family: 'Playfair Display', serif;
-            color: #2c3e50;
+            color: var(--navy);
         }
+
+        p {
+            line-height: 1.7;
+        }
+
         .hero {
-            background: linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.8)), url('https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=600&q=80');
-            background-size: cover;
-            background-position: center;
             min-height: 100vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            text-align: center;
+            background:
+                linear-gradient(rgba(255,255,255,0.7), rgba(255,255,255,0.72)),
+                url('https://images.unsplash.com/photo-1520854221256-17451cc331bf?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
+            padding: 30px 20px 40px;
+            position: relative;
         }
+
+        .hero::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: rgba(255,255,255,0.08);
+        }
+
+        .hero > * {
+            position: relative;
+            z-index: 1;
+        }
+
+        .eyebrow {
+            letter-spacing: 5px;
+            font-size: 0.78rem;
+            color: var(--navy);
+            margin-bottom: 10px;
+        }
+
         .names {
-            font-size: 2.2rem;
-            margin: 20px 0;
-            color: #4a6572;
+            font-size: clamp(2.2rem, 5vw, 3rem);
+            margin: 12px 0 10px;
+            color: var(--navy);
             font-family: 'Playfair Display', serif;
             font-style: italic;
+            font-weight: 600;
         }
+
         .date {
-            font-size: 1.1rem;
+            font-size: 1.05rem;
             letter-spacing: 2px;
             margin-bottom: 20px;
-            font-weight: 500;
-        }
-        .countdown {
-            font-size: 1.5rem;
             font-weight: 600;
-            color: #4a6572;
-            margin-bottom: 30px;
+            color: var(--navy);
         }
+
+        .countdown-box {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin: 14px 0 30px;
+        }
+
+        .time-box {
+            background: rgba(255, 255, 255, 0.82);
+            border: 1px solid rgba(184, 147, 90, 0.35);
+            border-radius: 12px;
+            width: 68px;
+            padding: 14px 8px;
+            box-shadow: 0 8px 20px rgba(74, 68, 60, 0.08);
+        }
+
+        .time-box .num {
+            display: block;
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--navy);
+            font-family: 'Playfair Display', serif;
+        }
+
+        .time-box .label {
+            display: block;
+            font-size: 0.62rem;
+            letter-spacing: 1.5px;
+            color: var(--muted);
+            margin-top: 4px;
+            text-transform: uppercase;
+        }
+
         .btn {
-            background-color: #dbe2ef;
-            color: #112233;
-            padding: 12px 30px;
-            border-radius: 30px;
+            display: inline-block;
+            background: linear-gradient(135deg, #d9c8a5, #b7935a);
+            color: white;
+            padding: 14px 30px;
+            border-radius: 999px;
             text-decoration: none;
             font-weight: 600;
-            border: 1px solid #babcce;
-            transition: 0.3s;
+            box-shadow: 0 12px 25px rgba(183, 147, 90, 0.28);
+            transition: all 0.25s ease;
+            border: 1px solid rgba(142, 111, 57, 0.2);
         }
+
         .btn:hover {
-            background-color: #cbd5e1;
+            transform: translateY(-2px);
+            filter: brightness(1.02);
         }
-        .details, .location {
-            background: #fdfdfd;
+
+        .hero-signature {
+            margin-top: 36px;
+            font-size: 0.8rem;
+            color: var(--muted);
         }
+
+        .quote {
+            background: var(--soft);
+            padding: 30px 22px;
+        }
+
+        .quote p {
+            font-size: 0.96rem;
+            color: var(--navy);
+        }
+
+        .quote strong {
+            display: block;
+            margin-top: 18px;
+            font-size: 0.86rem;
+            color: var(--gold-dark);
+            letter-spacing: 1px;
+        }
+
+        .family {
+            background: #fff;
+        }
+
+        .family h2 {
+            font-size: 2rem;
+            margin-bottom: 18px;
+        }
+
+        .family .intro {
+            margin-bottom: 30px;
+            color: var(--muted);
+        }
+
+        .couple {
+            display: flex;
+            flex-direction: column;
+            gap: 26px;
+        }
+
+        .person {
+            padding: 18px 12px;
+            border: 1px solid var(--line);
+            border-radius: 18px;
+            background: linear-gradient(180deg, #fff, #f7f3f1);
+        }
+
+        .person h3 {
+            font-size: 2rem;
+            color: var(--gold-dark);
+            margin-bottom: 8px;
+        }
+
+        .person .detail {
+            font-size: 0.8rem;
+            color: var(--muted);
+        }
+
+        .ampersand {
+            font-size: 2.1rem;
+            color: var(--navy);
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            margin: 8px 0;
+        }
+
+        .event {
+            background: #fffdfd;
+            border-top: 1px solid var(--line);
+            border-bottom: 1px solid var(--line);
+        }
+
+        .event h2 {
+            font-size: 2rem;
+            margin-bottom: 18px;
+        }
+
+        .event-grid {
+            display: grid;
+            gap: 16px;
+            margin-top: 24px;
+        }
+
+        .event-box {
+            background: var(--soft);
+            border-radius: 18px;
+            border: 1px solid var(--line);
+            padding: 20px 16px;
+        }
+
+        .event-box h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: var(--gold-dark);
+        }
+
+        .event-box .date-event {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--navy);
+            margin-bottom: 4px;
+        }
+
+        .event-box .time {
+            color: var(--muted);
+            font-size: 0.9rem;
+        }
+
+        .location {
+            background: #fff;
+        }
+
+        .location h2 {
+            font-size: 2rem;
+            margin-bottom: 18px;
+        }
+
+        .location-card {
+            background: var(--soft);
+            border: 1px solid var(--line);
+            border-radius: 18px;
+            overflow: hidden;
+            text-align: left;
+            margin-top: 18px;
+        }
+
         .map-frame {
             width: 100%;
-            height: 250px;
+            height: 260px;
             border: 0;
-            margin-top: 15px;
-            border-radius: 8px;
+            display: block;
         }
-        .footer {
-            font-size: 0.9rem;
-            color: #777;
-            padding: 20px;
+
+        .location-info {
+            padding: 18px 16px 22px;
+        }
+
+        .location-info h3 {
+            font-size: 1.4rem;
+            margin-bottom: 8px;
+            color: var(--navy);
+        }
+
+        .location-info p {
+            color: var(--muted);
+            font-size: 0.88rem;
+        }
+
+        .cta {
+            background: linear-gradient(180deg, #f8f2ef, #f4efe9);
+        }
+
+        .cta h2 {
+            font-size: 2rem;
+            margin-bottom: 14px;
+        }
+
+        .cta p {
+            color: var(--muted);
+            margin-bottom: 24px;
+        }
+
+        .cta-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .btn-secondary {
+            display: inline-block;
+            padding: 14px 22px;
+            border-radius: 999px;
+            text-decoration: none;
+            font-weight: 600;
+            border: 1px solid rgba(42, 64, 85, 0.2);
+            background: #fff;
+            color: var(--navy);
+        }
+
+        .bottom {
+            text-align: center;
+            padding: 18px 20px 30px;
+            color: var(--muted);
+            font-size: 0.82rem;
+            background: #f7f3f1;
+        }
+
+        @media (max-width: 420px) {
+            .countdown-box {
+                gap: 8px;
+            }
+
+            .time-box {
+                width: 60px;
+            }
         }
     </style>
 </head>
 <body>
-
-    <div class="container">
-        <!-- Bagian Cover / Depan -->
-        <section class="hero">
-            <p style="letter-spacing: 3px; font-size: 0.9rem;">THE STORY OF</p>
-            <div class="names">Deviana & Bayu</div>
+    <div class="page">
+        <section class="hero" id="top">
+            <p class="eyebrow">THE STORY OF</p>
+            <div class="names">Deviana &amp; Bayu</div>
             <div class="date">11 DESEMBER 2026</div>
-            <div class="countdown">49 : 23 : 46 : 05</div>
-            <a href="#akad" class="btn">Buka Undangan</a>
-            <p style="margin-top: 40px; font-size: 0.8rem; color: #888;">By : SelvStudio</p>
+
+            <div class="countdown-box" aria-label="Countdown menuju hari pernikahan">
+                <div class="time-box">
+                    <span class="num" id="days">00</span>
+                    <span class="label">Hari</span>
+                </div>
+                <div class="time-box">
+                    <span class="num" id="hours">00</span>
+                    <span class="label">Jam</span>
+                </div>
+                <div class="time-box">
+                    <span class="num" id="minutes">00</span>
+                    <span class="label">Menit</span>
+                </div>
+                <div class="time-box">
+                    <span class="num" id="seconds">00</span>
+                    <span class="label">Detik</span>
+                </div>
+            </div>
+
+            <a href="#details" class="btn">Buka Undangan</a>
+            <p class="hero-signature">By : SelvStudio</p>
         </section>
 
-        <!-- Bagian Salam & Mempelai -->
-        <section class="details">
-            <p style="font-style: italic; margin-bottom: 15px;">Assalamu'alaikum warohmatullahi wabarokatuh</p>
-            <p style="font-size: 0.9rem; margin-bottom: 30px; line-height: 1.6;">Dengan ini kami mengundang Bapak/Ibu/Saudara/i untuk hadir pada pernikahan putra dan putri kami</p>
-            
-            <h2 style="font-size: 1.8rem; color: #b89753;">Deviana Rahayu Anggia</h2>
-            <p style="font-size: 0.85rem; color: #666; margin-top: 5px;">Putri kedua dari Bapak Jan Pinter Hongrius & Ibu Sri Hartini</p>
-            
-            <div style="font-size: 1.5rem; margin: 15px 0; color: #4a6572;">&</div>
-            
-            <h2 style="font-size: 1.8rem; color: #b89753;">Bayu Pratikno</h2>
-            <p style="font-size: 0.85rem; color: #666; margin-top: 5px;">Putra Kedua dari Alm Bapak Hartono dan Alm Ibu Suginem</p>
+        <section class="quote" id="details">
+            <p>“Dan di antara tanda-tanda-Nya ialah Dia menciptakan pasangan-pasangan untukmu dari jenismu sendiri agar kamu merasa tenang dan tentram, dan Dia menjadikan di antaramu rasa kasih dan sayang.”</p>
+            <strong>QS. Ar-Rum: 21</strong>
         </section>
 
-        <!-- Bagian Waktu Acara -->
-        <section id="akad" style="background: #ffffff;">
-            <p style="margin-bottom: 20px; font-size: 0.95rem;">Yang insya Allah akan dilaksanakan pada:</p>
-            <h2 style="font-size: 2rem; color: #4a6572;">Jumat</h2>
-            <div style="font-size: 4rem; font-family: 'Playfair Display', serif; color: #2c3e50; font-weight: bold; margin: 10px 0;">11</div>
-            <p style="font-size: 1.1rem; font-weight: 500; margin-bottom: 20px;">Desember 2026</p>
-            <hr style="width: 50px; margin: 0 auto 20px auto; border: 1px solid #ccc;">
-            <h3 style="color: #4a6572; margin-bottom: 5px;">Akad</h3>
-            <p style="font-size: 0.95rem;">Pukul | 08:30 WIB - 11:00 WIB</p>
-        </section>
+        <section class="family">
+            <p class="eyebrow" style="margin-bottom: 8px;">Dengan memohon ridho dan rahmat Allah SWT</p>
+            <h2>Mempelai</h2>
+            <p class="intro">Dengan ini kami mengundang Bapak/Ibu/Saudara/i untuk hadir pada pernikahan putra dan putri kami.</p>
 
-        <!-- Bagian Lokasi -->
-        <section class="location">
-            <h2 style="font-size: 2rem; margin-bottom: 15px; font-style: italic;">Lokasi</h2>
-            <p style="font-weight: 600; color: #2c3e50; margin-bottom: 5px;">Musholah Al-Hijrah</p>
-            <p style="font-size: 0.9rem; color: #555; margin-bottom: 15px;">Jl. Jordan Rt.05/03 Mampang, Pancoran Mas, Depok</p>
-            
-            <!-- Google Maps Embed -->
-            <iframe class="map-frame" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.040212!2d106.790!3d-6.402!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNsKwMjQnMDU!1m0!1m2!1s0x2e69f4b4b4b4b4b4%3A0x0!2m3!1d0!2d0!3d0!4m3!3m2!1s0x2e69f4b4b4b4b4b4%3A0x0!5e0!3m2!1sen!2sid!4v1670000000000!5m2!1sen!2sid" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            
-            <p style="font-style: italic; margin-top: 30px; font-size: 0.9rem;">Wassalamu'alaikum warohmatullahi wabarokatuh</p>
-            <p style="margin-top: 20px; font-weight: 500; font-size: 0.9rem;">Kami yang Berbahagia,</p>
-            <div style="display: flex; justify-content: space-between; font-size: 0.8rem; color: #555; margin-top: 10px; text-align: left; padding: 0 10px;">
-                <div style="width: 48%;">Kel. Besar Alm Bapak Hartono dan Alm Ibu Suginem</div>
-                <div style="width: 48%;">Kel. Besar Bapak Jan Pinter & Ibu Sri Hartini</div>
+            <div class="couple">
+                <div class="person">
+                    <h3>Deviana Rahayu Anggia</h3>
+                    <p class="detail">Putri kedua dari Bapak Jan Pinter Hongrius &amp; Ibu Sri Hartini</p>
+                </div>
+
+                <div class="ampersand">&amp;</div>
+
+                <div class="person">
+                    <h3>Bayu Pratikno</h3>
+                    <p class="detail">Putra Kedua dari Alm Bapak Hartono &amp; Alm Ibu Suginem</p>
+                </div>
             </div>
         </section>
 
-        <div class="footer">
-            <p>&copy; 2026 Deviana & Bayu. All Rights Reserved.</p>
+        <section class="event" id="event">
+            <h2>Waktu &amp; Acara</h2>
+            <div class="event-grid">
+                <div class="event-box">
+                    <h3>Akad Nikah</h3>
+                    <p class="date-event">Jumat, 11 Desember 2026</p>
+                    <p class="time">Pukul 08.30 WIB - 11.00 WIB</p>
+                </div>
+                <div class="event-box">
+                    <h3>Resepsi</h3>
+                    <p class="date-event">Jumat, 11 Desember 2026</p>
+                    <p class="time">Pukul 12.00 WIB - Selesai</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="location" id="location">
+            <h2>Lokasi</h2>
+            <div class="location-card">
+                <iframe
+                    class="map-frame"
+                    src="https://www.google.com/maps?q=Musholah%20Al-Hijrah%20Depok&z=15&output=embed"
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                    allowfullscreen>
+                </iframe>
+                <div class="location-info">
+                    <h3>Musholah Al-Hijrah</h3>
+                    <p>Jl. Jordan Rt.05/03 Mampang, Pancoran Mas, Depok</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta" id="rsvp">
+            <h2>Meriahkan Hari Kami</h2>
+            <p>Doa dan kehadiran Anda adalah kebahagiaan terbesar bagi kami.</p>
+            <div class="cta-buttons">
+                <a href="#location" class="btn">Lihat Lokasi</a>
+                <a href="https://wa.me/6281234567890?text=Halo%20Deviana%20%26%20Bayu%2C%20saya%20ingin%20mengonfirmasi%20kehadiran%20di%20acara%20pernikahan%20Anda." class="btn-secondary" target="_blank" rel="noopener">Konfirmasi Kehadiran</a>
+            </div>
+        </section>
+
+        <div class="bottom">
+            &copy; 2026 Deviana &amp; Bayu. All Rights Reserved.
         </div>
     </div>
 
+    <script>
+        const weddingDate = new Date('2026-12-11T08:30:00+07:00');
+
+        function updateCountdown() {
+            const now = new Date();
+            const diff = weddingDate - now;
+
+            if (diff <= 0) {
+                document.getElementById('days').textContent = '00';
+                document.getElementById('hours').textContent = '00';
+                document.getElementById('minutes').textContent = '00';
+                document.getElementById('seconds').textContent = '00';
+                return;
+            }
+
+            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+            const minutes = Math.floor((diff / (1000 * 60)) % 60);
+            const seconds = Math.floor((diff / 1000) % 60);
+
+            document.getElementById('days').textContent = String(days).padStart(2, '0');
+            document.getElementById('hours').textContent = String(hours).padStart(2, '0');
+            document.getElementById('minutes').textContent = String(minutes).padStart(2, '0');
+            document.getElementById('seconds').textContent = String(seconds).padStart(2, '0');
+        }
+
+        updateCountdown();
+        setInterval(updateCountdown, 1000);
+    </script>
 </body>
 </html>
