@@ -6,6 +6,28 @@
     <title>Undangan Pernikahan Deviana & Bayu</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..700;1,400..700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
+    <meta name="description" content="Undangan pernikahan Deviana & Bayu">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..700;1,400..700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #f4f0ee;
+            --card: #fffdfc;
+            --soft: #f7f1ee;
+            --gold: #b7935a;
+            --gold-dark: #8e6f39;
+            --navy: #2a4055;
+            --text: #3d3d3d;
+            --muted: #7b7b7b;
+            --line: #e8ddd5;
+            --shadow: 0 12px 30px rgba(46, 41, 36, 0.12);
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
         * {
             margin: 0;
             padding: 0;
@@ -41,6 +63,37 @@
             background: linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.8)), url('https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=600&q=80');
             background-size: cover;
             background-position: center;
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(180deg, #f3eee9 0%, #f7f3f1 100%);
+            color: var(--text);
+            min-height: 100vh;
+        }
+
+        .page {
+            max-width: 480px;
+            margin: 0 auto;
+            background: var(--card);
+            box-shadow: var(--shadow);
+            min-height: 100vh;
+        }
+
+        section {
+            padding: 52px 22px;
+            text-align: center;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+            color: var(--navy);
+        }
+
+        p {
+            line-height: 1.7;
+        }
+
+        .hero {
             min-height: 100vh;
             display: flex;
             flex-direction: column;
@@ -93,6 +146,301 @@
             font-size: 0.9rem;
             color: #777;
             padding: 20px;
+            text-align: center;
+            background:
+                linear-gradient(rgba(255,255,255,0.7), rgba(255,255,255,0.72)),
+                url('https://images.unsplash.com/photo-1520854221256-17451cc331bf?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
+            padding: 30px 20px 40px;
+            position: relative;
+        }
+
+        .hero::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: rgba(255,255,255,0.08);
+        }
+
+        .hero > * {
+            position: relative;
+            z-index: 1;
+        }
+
+        .eyebrow {
+            letter-spacing: 5px;
+            font-size: 0.78rem;
+            color: var(--navy);
+            margin-bottom: 10px;
+        }
+
+        .names {
+            font-size: clamp(2.2rem, 5vw, 3rem);
+            margin: 12px 0 10px;
+            color: var(--navy);
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-weight: 600;
+        }
+
+        .date {
+            font-size: 1.05rem;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+            font-weight: 600;
+            color: var(--navy);
+        }
+
+        .countdown-box {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin: 14px 0 30px;
+        }
+
+        .time-box {
+            background: rgba(255, 255, 255, 0.82);
+            border: 1px solid rgba(184, 147, 90, 0.35);
+            border-radius: 12px;
+            width: 68px;
+            padding: 14px 8px;
+            box-shadow: 0 8px 20px rgba(74, 68, 60, 0.08);
+        }
+
+        .time-box .num {
+            display: block;
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--navy);
+            font-family: 'Playfair Display', serif;
+        }
+
+        .time-box .label {
+            display: block;
+            font-size: 0.62rem;
+            letter-spacing: 1.5px;
+            color: var(--muted);
+            margin-top: 4px;
+            text-transform: uppercase;
+        }
+
+        .btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #d9c8a5, #b7935a);
+            color: white;
+            padding: 14px 30px;
+            border-radius: 999px;
+            text-decoration: none;
+            font-weight: 600;
+            box-shadow: 0 12px 25px rgba(183, 147, 90, 0.28);
+            transition: all 0.25s ease;
+            border: 1px solid rgba(142, 111, 57, 0.2);
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            filter: brightness(1.02);
+        }
+
+        .hero-signature {
+            margin-top: 36px;
+            font-size: 0.8rem;
+            color: var(--muted);
+        }
+
+        .quote {
+            background: var(--soft);
+            padding: 30px 22px;
+        }
+
+        .quote p {
+            font-size: 0.96rem;
+            color: var(--navy);
+        }
+
+        .quote strong {
+            display: block;
+            margin-top: 18px;
+            font-size: 0.86rem;
+            color: var(--gold-dark);
+            letter-spacing: 1px;
+        }
+
+        .family {
+            background: #fff;
+        }
+
+        .family h2 {
+            font-size: 2rem;
+            margin-bottom: 18px;
+        }
+
+        .family .intro {
+            margin-bottom: 30px;
+            color: var(--muted);
+        }
+
+        .couple {
+            display: flex;
+            flex-direction: column;
+            gap: 26px;
+        }
+
+        .person {
+            padding: 18px 12px;
+            border: 1px solid var(--line);
+            border-radius: 18px;
+            background: linear-gradient(180deg, #fff, #f7f3f1);
+        }
+
+        .person h3 {
+            font-size: 2rem;
+            color: var(--gold-dark);
+            margin-bottom: 8px;
+        }
+
+        .person .detail {
+            font-size: 0.8rem;
+            color: var(--muted);
+        }
+
+        .ampersand {
+            font-size: 2.1rem;
+            color: var(--navy);
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            margin: 8px 0;
+        }
+
+        .event {
+            background: #fffdfd;
+            border-top: 1px solid var(--line);
+            border-bottom: 1px solid var(--line);
+        }
+
+        .event h2 {
+            font-size: 2rem;
+            margin-bottom: 18px;
+        }
+
+        .event-grid {
+            display: grid;
+            gap: 16px;
+            margin-top: 24px;
+        }
+
+        .event-box {
+            background: var(--soft);
+            border-radius: 18px;
+            border: 1px solid var(--line);
+            padding: 20px 16px;
+        }
+
+        .event-box h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: var(--gold-dark);
+        }
+
+        .event-box .date-event {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--navy);
+            margin-bottom: 4px;
+        }
+
+        .event-box .time {
+            color: var(--muted);
+            font-size: 0.9rem;
+        }
+
+        .location {
+            background: #fff;
+        }
+
+        .location h2 {
+            font-size: 2rem;
+            margin-bottom: 18px;
+        }
+
+        .location-card {
+            background: var(--soft);
+            border: 1px solid var(--line);
+            border-radius: 18px;
+            overflow: hidden;
+            text-align: left;
+            margin-top: 18px;
+        }
+
+        .map-frame {
+            width: 100%;
+            height: 260px;
+            border: 0;
+            display: block;
+        }
+
+        .location-info {
+            padding: 18px 16px 22px;
+        }
+
+        .location-info h3 {
+            font-size: 1.4rem;
+            margin-bottom: 8px;
+            color: var(--navy);
+        }
+
+        .location-info p {
+            color: var(--muted);
+            font-size: 0.88rem;
+        }
+
+        .cta {
+            background: linear-gradient(180deg, #f8f2ef, #f4efe9);
+        }
+
+        .cta h2 {
+            font-size: 2rem;
+            margin-bottom: 14px;
+        }
+
+        .cta p {
+            color: var(--muted);
+            margin-bottom: 24px;
+        }
+
+        .cta-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .btn-secondary {
+            display: inline-block;
+            padding: 14px 22px;
+            border-radius: 999px;
+            text-decoration: none;
+            font-weight: 600;
+            border: 1px solid rgba(42, 64, 85, 0.2);
+            background: #fff;
+            color: var(--navy);
+        }
+
+        .bottom {
+            text-align: center;
+            padding: 18px 20px 30px;
+            color: var(--muted);
+            font-size: 0.82rem;
+            background: #f7f3f1;
+        }
+
+        @media (max-width: 420px) {
+            .countdown-box {
+                gap: 8px;
+            }
+
+            .time-box {
+                width: 60px;
+            }
         }
     </style>
 </head>
@@ -156,5 +504,135 @@
         </div>
     </div>
 
+    <div class="page">
+        <section class="hero" id="top">
+            <p class="eyebrow">THE STORY OF</p>
+            <div class="names">Deviana &amp; Bayu</div>
+            <div class="date">11 DESEMBER 2026</div>
+
+            <div class="countdown-box" aria-label="Countdown menuju hari pernikahan">
+                <div class="time-box">
+                    <span class="num" id="days">00</span>
+                    <span class="label">Hari</span>
+                </div>
+                <div class="time-box">
+                    <span class="num" id="hours">00</span>
+                    <span class="label">Jam</span>
+                </div>
+                <div class="time-box">
+                    <span class="num" id="minutes">00</span>
+                    <span class="label">Menit</span>
+                </div>
+                <div class="time-box">
+                    <span class="num" id="seconds">00</span>
+                    <span class="label">Detik</span>
+                </div>
+            </div>
+
+            <a href="#details" class="btn">Buka Undangan</a>
+            <p class="hero-signature">By : SelvStudio</p>
+        </section>
+
+        <section class="quote" id="details">
+            <p>“Dan di antara tanda-tanda-Nya ialah Dia menciptakan pasangan-pasangan untukmu dari jenismu sendiri agar kamu merasa tenang dan tentram, dan Dia menjadikan di antaramu rasa kasih dan [...]</p>
+            <strong>QS. Ar-Rum: 21</strong>
+        </section>
+
+        <section class="family">
+            <p class="eyebrow" style="margin-bottom: 8px;">Dengan memohon ridho dan rahmat Allah SWT</p>
+            <h2>Mempelai</h2>
+            <p class="intro">Dengan ini kami mengundang Bapak/Ibu/Saudara/i untuk hadir pada pernikahan putra dan putri kami.</p>
+
+            <div class="couple">
+                <div class="person">
+                    <h3>Deviana Rahayu Anggia</h3>
+                    <p class="detail">Putri kedua dari Bapak Jan Pinter Hongrius &amp; Ibu Sri Hartini</p>
+                </div>
+
+                <div class="ampersand">&amp;</div>
+
+                <div class="person">
+                    <h3>Bayu Pratikno</h3>
+                    <p class="detail">Putra Kedua dari Alm Bapak Hartono &amp; Alm Ibu Suginem</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="event" id="event">
+            <h2>Waktu &amp; Acara</h2>
+            <div class="event-grid">
+                <div class="event-box">
+                    <h3>Akad Nikah</h3>
+                    <p class="date-event">Jumat, 11 Desember 2026</p>
+                    <p class="time">Pukul 08.30 WIB - 11.00 WIB</p>
+                </div>
+                <div class="event-box">
+                    <h3>Resepsi</h3>
+                    <p class="date-event">Jumat, 11 Desember 2026</p>
+                    <p class="time">Pukul 12.00 WIB - Selesai</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="location" id="location">
+            <h2>Lokasi</h2>
+            <div class="location-card">
+                <iframe
+                    class="map-frame"
+                    src="https://www.google.com/maps?q=Jl.%20Jordan%20Rt.05%2F03%20Mampang%2C%20Pancoran%20Mas%2C%20Depok&z=15&output=embed"
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                    allowfullscreen>
+                </iframe>
+                <div class="location-info">
+                    <h3>Musholah Al-Hijrah</h3>
+                    <p>Jl. Jordan Rt.05/03 Mampang, Pancoran Mas, Depok</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta" id="rsvp">
+            <h2>Meriahkan Hari Kami</h2>
+            <p>Doa dan kehadiran Anda adalah kebahagiaan terbesar bagi kami.</p>
+            <div class="cta-buttons">
+                <a href="#location" class="btn">Lihat Lokasi</a>
+                <a href="https://wa.me/6281234567890?text=Halo%20Deviana%20%26%20Bayu%2C%20saya%20ingin%20mengonfirmasi%20kehadiran%20di%20acara%20pernikahan%20Anda." class="btn-secondary" target="_blank" rel="noopener noreferrer">Konfirmasi Kehadiran</a>
+            </div>
+        </section>
+
+        <div class="bottom">
+            &copy; 2026 Deviana &amp; Bayu. All Rights Reserved.
+        </div>
+    </div>
+
+    <script>
+        const weddingDate = new Date('2026-12-11T08:30:00+07:00');
+
+        function updateCountdown() {
+            const now = new Date();
+            const diff = weddingDate - now;
+
+            if (diff <= 0) {
+                document.getElementById('days').textContent = '00';
+                document.getElementById('hours').textContent = '00';
+                document.getElementById('minutes').textContent = '00';
+                document.getElementById('seconds').textContent = '00';
+                return;
+            }
+
+            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+            const minutes = Math.floor((diff / (1000 * 60)) % 60);
+            const seconds = Math.floor((diff / 1000) % 60);
+
+            document.getElementById('days').textContent = String(days).padStart(2, '0');
+            document.getElementById('hours').textContent = String(hours).padStart(2, '0');
+            document.getElementById('minutes').textContent = String(minutes).padStart(2, '0');
+            document.getElementById('seconds').textContent = String(seconds).padStart(2, '0');
+        }
+
+        updateCountdown();
+        setInterval(updateCountdown, 1000);
+    </script>
 </body>
 </html>
