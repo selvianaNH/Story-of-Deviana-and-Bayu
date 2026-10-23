@@ -16,7 +16,7 @@
             --gold: #b7935a;
             --gold-dark: #8e6f39;
             --navy: #2a4055;
-            --text: #5f89b1;
+            --text: #3d3d3d;
             --muted: #7b7b7b;
             --line: #e8ddd5;
             --shadow: 0 14px 34px rgba(46, 41, 36, 0.12);
@@ -426,7 +426,7 @@
         }
 
         .location-info {
-            padding: 18px 16px 22px;
+            padding: 18px 16px 12px;
         }
 
         .location-info h3 {
@@ -460,6 +460,13 @@
             gap: 12px;
         }
 
+        .location-card .cta-buttons {
+            display: flex;
+            justify-content: center;
+            padding: 0 16px 18px;
+            gap: 0;
+        }
+
         .btn-secondary {
             display: inline-block;
             padding: 14px 22px;
@@ -469,6 +476,20 @@
             border: 1px solid rgba(42, 64, 85, 0.2);
             background: #fff;
             color: var(--navy);
+            box-shadow: 0 8px 16px rgba(42, 64, 85, 0.08);
+        }
+
+        .location-card .btn-secondary {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 180px;
+            padding: 12px 18px;
+            background: linear-gradient(135deg, #f9f2ea, #f1e3d0);
+            border: 1px solid rgba(183, 147, 90, 0.35);
+            color: var(--navy);
+            font-size: 0.92rem;
+            box-shadow: 0 8px 18px rgba(183, 147, 90, 0.12);
         }
 
         .bottom {
