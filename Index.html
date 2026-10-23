@@ -7,7 +7,7 @@
     <title>Undangan Pernikahan Deviana & Bayu</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Great+Vibes&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
     <style>
         :root {
             --bg: #f5f0ed;
@@ -20,6 +20,9 @@
             --muted: #7b7b7b;
             --line: #e8ddd5;
             --shadow: 0 14px 34px rgba(46, 41, 36, 0.12);
+            --ivory: #f9f5f2;
+            --ivory-2: #f3eee9;
+            --dusty: #bcced9;
         }
 
         * {
@@ -201,49 +204,119 @@
         }
 
         .family {
-            background: #fff;
+            position: relative;
+            background: linear-gradient(180deg, #f9f5f2 0%, #f5f0ed 100%);
+            padding: 64px 18px 52px;
+            overflow: hidden;
         }
 
-        .family h2 {
-            font-size: 2rem;
-            margin-bottom: 18px;
-        }
-
-        .family .intro {
-            margin-bottom: 30px;
-            color: var(--muted);
-        }
-
-        .couple {
-            display: flex;
-            flex-direction: column;
-            gap: 26px;
-        }
-
-        .person {
-            padding: 18px 12px;
-            border: 1px solid var(--line);
-            border-radius: 18px;
-            background: linear-gradient(180deg, #fff, #f7f3f1);
-        }
-
-        .person h3 {
-            font-size: 2rem;
-            color: var(--gold-dark);
+        .family .eyebrow {
             margin-bottom: 8px;
         }
 
-        .person .detail {
-            font-size: 0.8rem;
-            color: var(--muted);
+        .floral {
+            position: absolute;
+            pointer-events: none;
+            opacity: 0.9;
+            z-index: 0;
         }
 
-        .ampersand {
-            font-size: 2.1rem;
-            color: var(--navy);
+        .floral img {
+            width: 140px;
+            height: auto;
+            object-fit: contain;
+            filter: drop-shadow(0 8px 12px rgba(118, 134, 146, 0.12));
+        }
+
+        .floral-top-left {
+            top: -8px;
+            left: -10px;
+            transform: rotate(-2deg);
+        }
+
+        .floral-bottom-left {
+            bottom: 8px;
+            left: -12px;
+            transform: rotate(11deg);
+        }
+
+        .floral-bottom-right {
+            right: -12px;
+            bottom: 8px;
+            transform: scaleX(-1) rotate(8deg);
+        }
+
+        .luxury-card {
+            position: relative;
+            z-index: 1;
+            max-width: 420px;
+            margin: 0 auto;
+            background: rgba(255,255,255,0.4);
+            border: 1px solid rgba(137, 158, 175, 0.16);
+            border-radius: 28px;
+            padding: 22px 18px 18px;
+            box-shadow: inset 0 0 0 1px rgba(255,255,255,0.45);
+        }
+
+        .monogram {
             font-family: 'Playfair Display', serif;
+            font-size: clamp(4rem, 14vw, 7rem);
+            font-weight: 600;
+            line-height: 0.9;
+            letter-spacing: -0.06em;
+            color: rgba(90, 112, 130, 0.75);
+            margin: 18px 0 12px;
+            text-align: center;
+        }
+
+        .bismillah {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2rem;
+            color: var(--gold-dark);
+            margin: 6px 0 16px;
+            text-align: center;
             font-style: italic;
-            margin: 8px 0;
+        }
+
+        .greeting {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.18rem;
+            font-style: italic;
+            color: var(--navy);
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .invite {
+            font-size: 0.9rem;
+            color: var(--muted);
+            margin: 0 auto 18px;
+            max-width: 300px;
+            line-height: 1.8;
+        }
+
+        .script-name {
+            font-family: 'Great Vibes', cursive;
+            font-size: clamp(2.3rem, 6vw, 3.4rem);
+            line-height: 1;
+            color: var(--gold-dark);
+            margin: 14px 0 6px;
+        }
+
+        .parents {
+            font-size: 0.78rem;
+            color: var(--muted);
+            margin: 0 auto 10px;
+            max-width: 300px;
+            line-height: 1.8;
+        }
+
+        .and {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.7rem;
+            color: var(--navy);
+            margin: 10px 0 0;
+            line-height: 1;
         }
 
         .story {
@@ -413,6 +486,10 @@
             .time-box {
                 width: 60px;
             }
+
+            .floral img {
+                width: 110px;
+            }
         }
     </style>
 </head>
@@ -451,23 +528,30 @@
             <strong>QS. Ar-Rum: 21</strong>
         </section>
 
-        <section class="family">
-            <p class="eyebrow" style="margin-bottom: 8px;">Dengan memohon ridho dan rahmat Allah SWT</p>
-            <h2>Mempelai</h2>
-            <p class="intro">Dengan ini kami mengundang Bapak/Ibu/Saudara/i untuk hadir pada pernikahan putra dan putri kami.</p>
+        <section class="family" id="family">
+            <div class="floral floral-top-left">
+                <img src="kiri-atas.png" alt="dekorasi bunga kiri atas" />
+            </div>
+            <div class="floral floral-bottom-left">
+                <img src="kiri-bawah.png" alt="dekorasi bunga kiri bawah" />
+            </div>
+            <div class="floral floral-bottom-right">
+                <img src="kanan-bawah.png" alt="dekorasi bunga kanan bawah" />
+            </div>
 
-            <div class="couple">
-                <div class="person">
-                    <h3>Deviana Rahayu Anggia</h3>
-                    <p class="detail">Putri kedua dari Bapak Jan Pinter Hongrius &amp; Ibu Sri Hartini</p>
-                </div>
+            <div class="luxury-card">
+                <div class="monogram">D&amp;B</div>
+                <div class="bismillah">بِسْمِ ٱللّٰهِ الرَّحْمٰنِ الرَّحِيمِ</div>
+                <p class="greeting">Assalamu'alaikum warohmatullahi wabarokatuh</p>
+                <p class="invite">Dengan ini kami mengundang Bapak/Ibu/Saudara/i untuk hadir pada pernikahan putra dan putri kami</p>
 
-                <div class="ampersand">&amp;</div>
+                <div class="script-name">Deviana Rahayu Anggia</div>
+                <p class="parents">Putri kedua dari Bapak Jan Pinter Hongrius &amp; Ibu Sri Hartini</p>
 
-                <div class="person">
-                    <h3>Bayu Pratikno</h3>
-                    <p class="detail">Putra Kedua dari Alm Bapak Hartono &amp; Alm Ibu Suginem</p>
-                </div>
+                <div class="and">&amp;</div>
+
+                <div class="script-name">Bayu Pratikno</div>
+                <p class="parents">Putra Kedua dari Alm Bapak Hartono &amp; Alm Ibu Suginem</p>
             </div>
         </section>
 
@@ -498,7 +582,7 @@
                     loading="lazy"
                     referrerpolicy="no-referrer-when-downgrade"
                     allowfullscreen>
-                </iframe>
+                ></iframe>
                 <div class="location-info">
                     <h3>Musholah Al-Hijrah</h3>
                     <p>Jl. Jordan Rt.05/03 Mampang, Pancoran Mas, Depok</p>
