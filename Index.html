@@ -16,15 +16,14 @@
             --gold: #b7935a;
             --gold-dark: #8e6f39;
             --navy: #2a4055;
-            --text: #3d3d3d;
+            --text: #5f89b1;
             --muted: #7b7b7b;
+            --blue: #5f89b1
             --line: #e8ddd5;
             --shadow: 0 14px 34px rgba(46, 41, 36, 0.12);
             --ivory: #f9f5f2;
             --ivory-2: #f3eee9;
             --dusty: #bcced9;
-            --dusty-blue: #5f89b1;
-            --dusty-blue-soft: #edf3f8;
             --gallery-bg: url('BG3.png');
         }
 
@@ -70,7 +69,7 @@
 
         h1, h2, h3 {
             font-family: 'Playfair Display', serif;
-            color: var(--navy);
+            color: var(--blue);
             line-height: 1.2;
         }
 
@@ -81,34 +80,8 @@
         .eyebrow {
             letter-spacing: 5px;
             font-size: 0.78rem;
-            color: var(--navy);
+            color: var(--blue);
             margin-bottom: 10px;
-        }
-
-        .guest-card {
-            margin: 18px 18px 0;
-            padding: 18px 20px;
-            background: linear-gradient(135deg, var(--dusty-blue-soft), #f6fafc);
-            border: 1px solid rgba(95, 137, 177, 0.25);
-            border-radius: 18px;
-            box-shadow: 0 12px 24px rgba(95, 137, 177, 0.08);
-        }
-
-        .guest-label {
-            font-size: 0.72rem;
-            letter-spacing: 0.08em;
-            text-transform: uppercase;
-            color: var(--dusty-blue);
-            margin-bottom: 8px;
-            font-weight: 600;
-        }
-
-        .guest-name {
-            font-size: clamp(1.2rem, 4vw, 1.8rem);
-            color: var(--navy);
-            font-family: 'Playfair Display', serif;
-            line-height: 1.3;
-            font-weight: 600;
         }
 
         .hero {
@@ -139,7 +112,7 @@
         .names {
             font-size: clamp(2.3rem, 5vw, 3.1rem);
             margin: 12px 0 10px;
-            color: var(--navy);
+            color: var(--blue);
             font-family: 'Playfair Display', serif;
             font-style: italic;
             font-weight: 600;
@@ -151,7 +124,7 @@
             letter-spacing: 2px;
             margin-bottom: 20px;
             font-weight: 600;
-            color: var(--navy);
+            color: var(--blue);
         }
 
         .countdown-box {
@@ -175,7 +148,7 @@
             display: block;
             font-size: 1.4rem;
             font-weight: 700;
-            color: var(--navy);
+            color: var(--blue);
             font-family: 'Playfair Display', serif;
         }
 
@@ -454,7 +427,7 @@
         }
 
         .location-info {
-            padding: 18px 16px 12px;
+            padding: 18px 16px 22px;
         }
 
         .location-info h3 {
@@ -488,13 +461,6 @@
             gap: 12px;
         }
 
-        .location-card .cta-buttons {
-            display: flex;
-            justify-content: center;
-            padding: 0 16px 18px;
-            gap: 0;
-        }
-
         .btn-secondary {
             display: inline-block;
             padding: 14px 22px;
@@ -504,87 +470,6 @@
             border: 1px solid rgba(42, 64, 85, 0.2);
             background: #fff;
             color: var(--navy);
-            box-shadow: 0 8px 16px rgba(42, 64, 85, 0.08);
-        }
-
-        .location-card .btn-secondary {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            min-width: 180px;
-            padding: 12px 18px;
-            background: linear-gradient(135deg, #f9f2ea, #f1e3d0);
-            border: 1px solid rgba(183, 147, 90, 0.35);
-            color: var(--navy);
-            font-size: 0.92rem;
-            box-shadow: 0 8px 18px rgba(183, 147, 90, 0.12);
-        }
-
-        .guest-form-wrap {
-            padding: 22px 18px 30px;
-            background: linear-gradient(180deg, #f9f5f2 0%, #f3f7fb 100%);
-            border-top: 1px solid var(--line);
-        }
-
-        .guest-form-card {
-            background: linear-gradient(135deg, rgba(95, 137, 177, 0.12), rgba(255,255,255,0.85));
-            border: 1px solid rgba(95, 137, 177, 0.25);
-            border-radius: 18px;
-            padding: 20px 18px;
-            box-shadow: 0 12px 24px rgba(95, 137, 177, 0.08);
-        }
-
-        .guest-form-card h3 {
-            font-size: 1.5rem;
-            color: var(--navy);
-            margin-bottom: 8px;
-        }
-
-        .guest-form-card form {
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-        }
-
-        .guest-form-card label {
-            font-size: 0.8rem;
-            color: var(--navy);
-            text-align: left;
-            font-weight: 600;
-        }
-
-        .guest-form-card input {
-            width: 100%;
-            border: 1px solid rgba(95, 137, 177, 0.4);
-            border-radius: 12px;
-            padding: 14px 14px;
-            font-size: 0.96rem;
-            background: rgba(255,255,255,0.9);
-            color: var(--navy);
-            outline: none;
-        }
-
-        .guest-form-card input:focus {
-            border-color: var(--dusty-blue);
-            box-shadow: 0 0 0 4px rgba(95, 137, 177, 0.12);
-        }
-
-        .guest-form-card button {
-            border: none;
-            border-radius: 999px;
-            padding: 14px 18px;
-            font-weight: 700;
-            font-size: 0.96rem;
-            color: #fff;
-            background: linear-gradient(135deg, var(--dusty-blue), #7da4c9);
-            cursor: pointer;
-            box-shadow: 0 12px 24px rgba(95, 137, 177, 0.2);
-            transition: transform 0.2s ease, filter 0.2s ease;
-        }
-
-        .guest-form-card button:hover {
-            transform: translateY(-1px);
-            filter: brightness(1.02);
         }
 
         .bottom {
@@ -607,20 +492,11 @@
             .gallery-grid {
                 grid-template-columns: 1fr;
             }
-
-            .guest-card {
-                margin: 14px 14px 0;
-            }
         }
     </style>
 </head>
 <body>
     <div class="page">
-        <div class="guest-card" aria-live="polite">
-            <p class="guest-label">Kepada Yth. Bpk/Ibu/Saudara/i:</p>
-            <h3 class="guest-name" id="guestName">Tamu Undangan</h3>
-        </div>
-
         <section class="hero" id="top">
             <p class="eyebrow">THE STORY OF</p>
             <div class="names">Deviana &amp; Bayu</div>
@@ -647,11 +523,6 @@
 
             <a href="#family" class="btn">Buka Undangan</a>
             <p class="hero-signature">By : SelvStudio</p>
-        </section>
-
-        <section class="quote" id="details">
-            <p>“Dan di antara tanda-tanda-Nya ialah Dia menciptakan pasangan-pasangan untukmu dari jenismu sendiri agar kamu merasa tenang dan tentram, dan Dia menjadikan di antaramu rasa kasih dan sayang.”</p>
-            <strong>QS. Ar-Rum: 21</strong>
         </section>
 
         <section class="family" id="family">
@@ -719,56 +590,21 @@
                 <div class="cta-buttons">
                     <a href="https://www.google.com/maps/place/KOMPLEK+JORDAN/data=!4m2!3m1!1s0x2e69e94ec70391c3:0x9632515692ac7fe1!18m1!1e1?utm_source=mstt_1&entry=gps&coh=192189&g_ep=CAESBzI2LjQzLjE0Ny4xLjA" class="btn-secondary" target="_blank" rel="noopener noreferrer">Buka Maps</a>
                 </div>
+
             </div>
         </section>
 
         <section class="cta" id="rsvp">
-            <h2>Meriahkan Hari Kami</h2>
             <p>Doa dan kehadiran Anda adalah kebahagiaan terbesar bagi kami.</p>
-            <div class="cta-buttons">
-                <a href="#location" class="btn">Lihat Lokasi</a>
-                <a href="https://wa.me/6281234567890?text=Halo%20Deviana%20%26%20Bayu%2C%20saya%20ingin%20mengonfirmasi%20kehadiran%20di%20acara%20pernikahan%20Anda." class="btn-secondary" target="_blank" rel="noopener noreferrer">Konfirmasi Kehadiran</a>
-            </div>
         </section>
 
-        <div class="guest-form-wrap">
-            <div class="guest-form-card">
-                <h3>Generate Link Undangan</h3>
-                <form id="guestForm">
-                    <label for="guestInput">Masukkan Nama Tamu</label>
-                    <input id="guestInput" type="text" placeholder="Contoh: Rina Putri" />
-                    <button type="submit">Kirim via WhatsApp</button>
-                </form>
-            </div>
-        </div>
-
         <div class="bottom">
-            &copy; 2026 Deviana &amp; Bayu. All Rights Reserved.
+            &copy; SelvStudio . All Rights Reserved.
         </div>
     </div>
 
     <script>
         const weddingDate = new Date('2026-12-11T08:30:00+07:00');
-
-        function formatGuestName(name) {
-            const cleaned = (name || '').trim();
-            return cleaned ? cleaned : 'Tamu Undangan';
-        }
-
-        function updateGuestDisplay() {
-            const params = new URLSearchParams(window.location.search);
-            const guestName = formatGuestName(params.get('to'));
-            const guestElement = document.getElementById('guestName');
-            const guestInput = document.getElementById('guestInput');
-
-            if (guestElement) {
-                guestElement.textContent = guestName;
-            }
-
-            if (guestInput) {
-                guestInput.value = guestName === 'Tamu Undangan' ? '' : guestName;
-            }
-        }
 
         function updateCountdown() {
             const now = new Date();
@@ -793,30 +629,8 @@
             document.getElementById('seconds').textContent = String(seconds).padStart(2, '0');
         }
 
-        document.addEventListener('DOMContentLoaded', function () {
-            updateGuestDisplay();
-            updateCountdown();
-            setInterval(updateCountdown, 1000);
-
-            const guestForm = document.getElementById('guestForm');
-            if (guestForm) {
-                guestForm.addEventListener('submit', function (event) {
-                    event.preventDefault();
-
-                    const guestName = formatGuestName(document.getElementById('guestInput').value);
-                    const baseUrl = window.location.origin + window.location.pathname;
-                    const inviteUrl = `${baseUrl}?to=${encodeURIComponent(guestName)}`;
-
-                    window.history.replaceState({}, '', inviteUrl);
-                    updateGuestDisplay();
-
-                    const message = `Halo Deviana & Bayu, saya ${guestName}. Saya ingin mengonfirmasi kehadiran pada undangan pernikahan Anda. Terima kasih atas undangannya.\n\nLink undangan: ${inviteUrl}`;
-                    const whatsappUrl = `https://wa.me/6281234567890?text=${encodeURIComponent(message)}`;
-
-                    window.open(whatsappUrl, '_blank');
-                });
-            }
-        });
+        updateCountdown();
+        setInterval(updateCountdown, 1000);
     </script>
 </body>
 </html>
