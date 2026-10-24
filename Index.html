@@ -598,34 +598,35 @@
             <p>Doa dan kehadiran Anda adalah kebahagiaan terbesar bagi kami.</p>
         </section>
 
-        <!-- Audio & Musik Latar -->
-    <audio id="background-music" loop>
-        <source src="audio/sal.mp3" type="audio/mpeg">
-        Browser Anda tidak Mendukung Pemutar Musik.
-    </audio>
+<!-- AUDIO / MUSIK LATAR BELAKANG -->
+<audio id="background-music" loop>
+    <source src="sal.mp3" type="audio/mpeg">
+    Browser Anda tidak Mendukung Pemutar Musik.
+</audio>
 
-    <!-- Tombol Musik Melayang di Pojok Layar -->
-    <button id="music-btn" onclick="toggleMusic()" style="position: fixed; bottom: 20px; right: 20px; z-index: 999; background: #5f89b1; color: white; border: none; border-radius: 50%; width: 45px; height: 45px; font-size: 18px; cursor: pointer; box-shadow: 0 4px 10px rgba(0,0,0,0.3);">
-        🎵
-    </button>
+<!-- Tombol Musik Melayang di Pojok Layar -->
+<button id="music-btn" onclick="toggleMusic()" style="position: fixed; bottom: 20px; right: 20px; z-index: 999; background: #5f89b1; color: white; border: none; border-radius: 50%; width: 45px; height: 45px; font-size: 18px; cursor: pointer; box-shadow: 0 4px 10px rgba(0,0,0,0.3);">
+    🎵
+</button>
 
-    <script>
-        const music = document.getElementById('background-music');
-        const musicBtn = document.getElementById('music-btn');
-        let isPlaying = false;
+<!-- JAVASCRIPT KONTROL MUSIK -->
+<script>
+    const music = document.getElementById('background-music');
+    const musicBtn = document.getElementById('music-btn');
+    let isPlaying = false;
 
-        function toggleMusic() {
-            if (isPlaying) {
-                music.pause();
-                musicBtn.innerHTML = '🔇';
-                isPlaying = false;
-            } else {
-                music.play();
-                musicBtn.innerHTML = '🎵';
-                isPlaying = true;
-            }
+    function toggleMusic() {
+        if (isPlaying) {
+            music.pause();
+            musicBtn.innerHTML = '🔇';
+            isPlaying = false;
+        } else {
+            music.play();
+            musicBtn.innerHTML = '🎵';
+            isPlaying = true;
         }
-    </script>
+    }
+</script>
 
         <div class="bottom">
             &copy; SelvStudio . All Rights Reserved.
