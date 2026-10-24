@@ -598,23 +598,42 @@
             <p>Doa dan kehadiran Anda adalah kebahagiaan terbesar bagi kami.</p>
         </section>
 
-<!-- AUDIO / MUSIK LATAR BELAKANG -->
+<!-- Elemen Audio / Musik -->
 <audio id="background-music" loop>
-    <source src="sal.mp3" type="audio/mpeg">
-    Browser Anda tidak Mendukung Pemutar Musik.
+    <source src="admesh.mp3" type="audio/mpeg">
 </audio>
 
-<!-- Tombol Musik Melayang di Pojok Layar -->
-<button id="music-btn" onclick="toggleMusic()" style="position: fixed; bottom: 20px; right: 20px; z-index: 999; background: #5f89b1; color: white; border: none; border-radius: 50%; width: 45px; height: 45px; font-size: 18px; cursor: pointer; box-shadow: 0 4px 10px rgba(0,0,0,0.3);">
+<!-- Tombol Musik Melayang (Untuk Pause/Play setelah dibuka) -->
+<button id="music-btn" onclick="toggleMusic()" style="position: fixed; bottom: 20px; right: 20px; z-index: 999; background: #5f89b1; color: white; border: none; border-radius: 50%; width: 45px; height: 45px; font-size: 18px; cursor: pointer; box-shadow: 0 4px 10px rgba(0,0,0,0.3); display: none;">
     🎵
 </button>
 
-<!-- JAVASCRIPT KONTROL MUSIK -->
 <script>
     const music = document.getElementById('background-music');
+    const cover = document.getElementById('cover-undangan');
     const musicBtn = document.getElementById('music-btn');
     let isPlaying = false;
 
+    function bukaUndangan() {
+        // 1. Putar musik
+        music.play().then(() => {
+            isPlaying = true;
+            musicBtn.innerHTML = '🎵';
+        }).catch(error => {
+            console.log("Gagal memutar audio: ", error);
+        });
+
+        // 2. Sembunyikan halaman cover / sampul
+        cover.style.opacity = '0';
+        setTimeout(() => {
+            cover.style.display = 'none';
+        }, 500); // Menghilangkan elemen setelah animasi selesai
+
+        // 3. Tampilkan tombol kontrol musik melayang di pojok
+        musicBtn.style.display = 'block';
+    }
+
+    // Fungsi untuk tombol 🎵 / 🔇 di pojok layar
     function toggleMusic() {
         if (isPlaying) {
             music.pause();
@@ -627,7 +646,6 @@
         }
     }
 </script>
-
         <div class="bottom">
             &copy; SelvStudio . All Rights Reserved.
         </div>
