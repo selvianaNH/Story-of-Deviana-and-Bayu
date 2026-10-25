@@ -403,7 +403,7 @@
         .location {
             background:
                 linear-gradient(rgba(255,255,255,0.7), rgba(255,255,255,0.72)),
-                url('BG2.png') center/cover no-repeat;
+                url('BG2.jpg') center/cover no-repeat;
             padding: 64px 18px 52px;
             overflow: hidden;
         }
@@ -691,18 +691,23 @@
         setInterval(updateCountdown, 1000);
     </script>
     <script>
-    window.addEventListener('load', function () {
-        const nav = performance.getEntriesByType('navigation')[0];
-        if (nav && nav.type === 'reload') {
-            setTimeout(function () {
-                bukaUndangan();
-                const familySection = document.getElementById('family');
-                if (familySection) {
-                    familySection.scrollIntoView({ behavior: 'auto', block: 'start' });
-                }
-            }, 150);
-        }
-    });
+    // Force scroll ke paling atas saat halaman di-reload / di-refresh
+    if ('scrollRestoration' in history) {
+        history.scrollRestoration = 'manual';
+    }
+
+    window.onbeforeunload = function () {
+        window.scrollTo(0, 0);
+    };
+
+    window.onload = function () {
+        // Memastikan layar terkunci kembali & posisi di paling atas
+        window.scrollTo(0, 0);
+        document.documentElement.style.overflow = 'hidden';
+        document.body.style.overflow = 'hidden';
+    };
+
+    // ... (Fungsi bukaUndangan dan toggleMusic tetap di bawahnya)
 </script>
 </body>
 </html>
