@@ -487,36 +487,6 @@ HTML
         }
     });
 </script>
-Catatan:
-
-Ini hanya akan aktif saat halaman di-refresh/reload.
-Tidak mengubah bagian lain dari file.
-Sudah memakai fungsi bukaUndangan() yang sudah ada, jadi tetap sesuai dengan struktur yang Anda buat.
-Kalau mau, saya juga bisa kasih versi yang lebih aman agar hanya otomatis buka saat pertama kali reload, bukan setiap kali halaman di-load ulang berkali-kali.
-
-Index.html
-<section class="location" id="location">
-            <h2>Lokasi</h2>
-            <div class="location-card">
-                <iframe
-                    class="map-frame"
-                    src="https://www.google.com/maps?q=Jl.%20Jordan%20Rt.05%2F03%20Mampang%2C%20Pancoran%20Mas%2C%20Depok&z=15&output=embed"
-                    loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"
-                    allowfullscreen>
-                ></iframe>
-                <div class="location-info">
-                    <h3>Musholah Al-Hijrah</h3>
-                    <p>Jl. Jordan Rt.05/03 Mampang, Pancoran Mas, Depok</p>
-                </div>
-               
-                <div class="cta-buttons">
-                    <a href="https://www.google.com/maps/place/KOMPLEK+JORDAN/data=!4m2!3m1!1s0x2e69e94ec70391c3:0x9632515692ac7fe1!18m1!1e1?utm_source=mstt_1&entry=gps&coh=192189&g_ep=CAESBzI2LjQzLjE0Ny4xLjA" class="btn" target="_blank" rel="noopener noreferrer">Buka Maps</a>
-                </div>
-
-Buat letaknya jadi 1 baris 2 kolom 
-Alamat di sebelah kiri , dan maps di sebelah kanan . Cukup berikan peruubahannya saya yg ubah sendiri
-Cukup ganti section location dan tambahkan CSS ini:
 
 CSS yang ditambahkan:
 CSS
@@ -558,74 +528,7 @@ CSS
         grid-template-columns: 1fr;
     }
 }
-Ganti struktur location jadi seperti ini:
-HTML
-<section class="location" id="location">
-    <h2>Lokasi</h2>
 
-    <div class="location-card">
-        <div class="location-info">
-            <h3>Musholah Al-Hijrah</h3>
-            <p>Jl. Jordan Rt.05/03 Mampang, Pancoran Mas, Depok</p>
-
-            <div class="cta-buttons">
-                <a href="https://www.google.com/maps/place/KOMPLEK+JORDAN/data=!4m2!3m1!1s0x2e69e94ec70391c3:0x9632515692ac7fe1!18m1!1e1?utm_source=mstt_1&entry=gps&coh=192189&g_ep=CAESBzI2LjQzLjE0Ny4xLjA" 
-                   class="btn" target="_blank" rel="noopener noreferrer">
-                    Buka Maps
-                </a>
-            </div>
-        </div>
-
-        <div class="location-map-wrap">
-            <iframe
-                class="map-frame"
-                src="https://www.google.com/maps?q=Jl.%20Jordan%20Rt.05%2F03%20Mampang%2C%20Pancoran%20Mas%2C%20Depok&z=15&output=embed"
-                loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"
-                allowfullscreen>
-            </iframe>
-        </div>
-    </div>
-</section>
-Kalau mau, saya juga bisa kasih versi yang lebih rapi lagi tanpa mengubah desain lama terlalu banyak.
-
-<section class="event" id="event">
-            <h2>Waktu &amp; Acara</h2>
-            <div class="event-grid">
-                <div class="event-box">
-                    <h3>Akad Nikah</h3>
-                    <p class="date-event">Jumat, 11 Desember 2026</p>
-                    <p class="time">Pukul 08.30 WIB - 11.00 WIB</p>
-                </div>
-            </div>
-        </section>
-
-
-HTML
-<section class="event" id="event">
-    <h2>Waktu &amp; Acara</h2>
-    <div class="event-grid">
-        <div class="event-box">
-            <h3>Akad Nikah</h3>
-
-            <div class="event-date-row">
-                <div class="event-day">Jumat</div>
-
-                <div class="event-date-circle">
-                    <span>11</span>
-                </div>
-
-                <div class="event-monthyear">Desember<br>2026</div>
-            </div>
-
-            <div class="event-time-box">
-                <span>Waktu Acara</span>
-                <strong>08.30 WIB - 11.00 WIB</strong>
-            </div>
-        </div>
-    </div>
-</section>
-Lalu tambahkan CSS ini untuk layout baru:
 
 CSS
 .event-grid {
