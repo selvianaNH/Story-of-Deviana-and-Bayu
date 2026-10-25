@@ -635,6 +635,9 @@
 
         // 3. Tampilkan tombol kontrol musik melayang di pojok
         musicBtn.style.display = 'block';
+        // 3. Buka Kunci Scroll agar Halaman 2 dan Seterusnya Bisa Di-scroll
+        document.documentElement.style.overflow='auto';
+        document.body.style.overflow = 'auto';
     }
 
     // Fungsi untuk tombol 🎵 / 🔇 di pojok layar
@@ -649,19 +652,8 @@
             isPlaying = true;
         }
     }
-
-        // 2. Sembunyikan Halaman Cover (Halaman 1)
-        if (cover) {
-            cover.style.opacity = '0';
-            setTimeout(() => {
-                cover.style.display = 'none'; // Cover benar-benar dihilangkan dari layar
-            }, 500);
-        }
-
-        // 3. Buka Kunci Scroll agar Halaman 2 dan Seterusnya Bisa Di-scroll
-        document.documentElement.style.overflow='auto';
-        document.body.style.overflow = 'auto';
-    }
+        
+    
 
 </script>
         <div class="bottom">
