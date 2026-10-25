@@ -813,7 +813,21 @@
         }
     }
         
-    
+    <script>
+    window.addEventListener('load', function () {
+        const nav = performance.getEntriesByType('navigation')[0];
+        if (nav && nav.type === 'reload') {
+            setTimeout(function () {
+                bukaUndangan();
+                const familySection = document.getElementById('family');
+                if (familySection) {
+                    familySection.scrollIntoView({ behavior: 'auto', block: 'start' });
+                }
+            }, 150);
+        }
+    });
+</script>
+
 
 </script>
         <div class="bottom">
