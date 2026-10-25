@@ -460,33 +460,27 @@
         }
 
         .cta-buttons {
-    display: block;
-    width: 80%;            /* Lebar tombol (bisa disesuaikan, misal 200px) */
-    max-width: 250px;
-    margin: 20px auto 0 auto; /* 'auto' di kiri dan kanan membuat posisi otomatis di tengah */
-    padding: 12px 20px;
-    background: linear-gradient(135deg, #d4af37 0%, #aa8c2c 100%); /* Warna gold polos yang elegan */
-    color: #ffffff;        /* Warna teks putih agar kontras */
-    text-align: center;
-    border: none;
-    border-radius: 30px;   /* Membuat sudutnya melengkung halus */
-    font-weight: 600;
-    font-size: 1rem;
-    text-decoration: none;
-    box-shadow: 0 4px 10px rgba(212, 175, 55, 0.3); /* Bayangan lembut sewarna gold */
-    transition: transform 0.2s, opacity 0.2s;
-    cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
 
         }
         .btn-secondary {
             display: inline-block;
-            padding: 14px 22px;
-            border-radius: 999px;
+            padding: 10px 28px;
+            background: linear-gradient(135deg, #c4a265 0%, #aa8543 100%); /* Warna gold lembut persis seperti di gambar */
+            color: #ffffff !important;
+            font-size: 0.9rem;
+            font-weight: 500;
             text-decoration: none;
-            font-weight: 600;
-            border: 1px solid rgba(42, 64, 85, 0.2);
-            background: #fff;
-            color: var(--navy);
+            border: none;
+            border-radius: 25px; /* Membuat bentuk oval/lonjong halus */
+            box-shadow: 0 4px 10px rgba(170, 133, 67, 0.25);
+            cursor: pointer;
+            transition: transform 0.2s ease, opacity 0.2s ease;
+            margin-top: 15px;
         }
 
         .bottom {
@@ -604,7 +598,7 @@
                     <h3>Musholah Al-Hijrah</h3>
                     <p>Jl. Jordan Rt.05/03 Mampang, Pancoran Mas, Depok</p>
                 </div>
-                <div> class="cta-buttons">
+                <div div class="cta-buttons">
                     <a href="https://www.google.com/maps/place/KOMPLEK+JORDAN/data=!4m2!3m1!1s0x2e69e94ec70391c3:0x9632515692ac7fe1!18m1!1e1?utm_source=mstt_1&entry=gps&coh=192189&g_ep=CAESBzI2LjQzLjE0Ny4xLjA" class="btn-secondary" target="_blank" rel="noopener noreferrer">Buka Maps</a>
                 </div>
                 
