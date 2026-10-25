@@ -421,17 +421,28 @@
             text-align: left;
             margin-top: 18px;
             box-shadow: 0 10px 24px rgba(0,0,0,0.06);
+            display: grid;
+            grid-template-columns: 1fr 1.3fr;
+            gap: 0;
+            
         }
 
         .map-frame {
             width: 100%;
             height: 50px;
+            min-height: 260px;
             border: 0;
             display: block;
         }
-
+        .location-map-wrap {
+            min-height: 260px;
+        }
         .location-info {
             padding: 18px 16px 22px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            background: rgba(255,255,255,0.4);
         }
 
         .location-info h3 {
@@ -444,6 +455,11 @@
             color: var(--muted);
             font-size: 0.88rem;
         }
+            @media (max-width: 520px) {
+        .location-card {
+        grid-template-columns: 1fr;
+    }
+}
 
         .cta {
             background: linear-gradient(180deg, #f8f2ef, #f4efe9);
@@ -566,29 +582,34 @@
                 </div>
             </div>
         </section>
+<section class="location" id="location">
+    <h2>Lokasi</h2>
 
-        <section class="location" id="location">
-            <h2>Lokasi</h2>
-            <div class="location-card">
-                <iframe
-                    class="map-frame"
-                    src="https://www.google.com/maps?q=Jl.%20Jordan%20Rt.05%2F03%20Mampang%2C%20Pancoran%20Mas%2C%20Depok&z=15&output=embed"
-                    loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"
-                    allowfullscreen>
-                ></iframe>
-                <div class="location-info">
-                    <h3>Musholah Al-Hijrah</h3>
-                    <p>Jl. Jordan Rt.05/03 Mampang, Pancoran Mas, Depok</p>
-                </div>
-               
-                <div class="cta-buttons">
-                    <a href="https://www.google.com/maps/place/KOMPLEK+JORDAN/data=!4m2!3m1!1s0x2e69e94ec70391c3:0x9632515692ac7fe1!18m1!1e1?utm_source=mstt_1&entry=gps&coh=192189&g_ep=CAESBzI2LjQzLjE0Ny4xLjA" class="btn" target="_blank" rel="noopener noreferrer">Buka Maps</a>
-                </div>
-                
+    <div class="location-card">
+        <div class="location-info">
+            <h3>Musholah Al-Hijrah</h3>
+            <p>Jl. Jordan Rt.05/03 Mampang, Pancoran Mas, Depok</p>
 
+            <div class="cta-buttons">
+                <a href="https://www.google.com/maps/place/KOMPLEK+JORDAN/data=!4m2!3m1!1s0x2e69e94ec70391c3:0x9632515692ac7fe1!18m1!1e1?utm_source=mstt_1&entry=gps&coh=192189&g_ep=CAESBzI2LjQzLjE0Ny4xLjA" 
+                   class="btn" target="_blank" rel="noopener noreferrer">
+                    Buka Maps
+                </a>
             </div>
-        </section>
+        </div>
+
+        <div class="location-map-wrap">
+            <iframe
+                class="map-frame"
+                src="https://www.google.com/maps?q=Jl.%20Jordan%20Rt.05%2F03%20Mampang%2C%20Pancoran%20Mas%2C%20Depok&z=15&output=embed"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                allowfullscreen>
+            </iframe>
+        </div>
+    </div>
+</section>
+        
                 <section class="gallery" id="story">
             <div class="gallery-header">
                 <p class="eyebrow">GALLERY</p>
