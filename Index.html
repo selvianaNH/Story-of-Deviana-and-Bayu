@@ -44,16 +44,21 @@
             color: var(--text);
             min-height: 100vh;
         }
+        body {
+    overflow: hidden; /* Mengunci scroll di awal saat cover aktif */
+}
         if (cover) {
             cover.style.opacity = '0';
             setTimeout(() => {
-                cover.style.display = 'none'; // Cover benar-benar dihilangkan dari layar
+                cover.style.display = 'none'; // Menghilangkan elemen cover sepenuhnya
             }, 500);
         }
 
-        // 3. Aktifkan kembali scroll halaman agar halaman ke-2 bisa digeser
+        // 3. Buka Kunci Scroll agar Halaman ke-2 Bisa Di-scroll
         document.documentElement.style.overflow = 'auto';
         document.body.style.overflow = 'auto';
+    }
+            </script>
     
         img {
             max-width: 100%;
