@@ -44,18 +44,6 @@
             color: var(--text);
             min-height: 100vh;
         }
-// 2. Sembunyikan Cover / Sampul Depan agar Halaman 2 Terbuka
-        const cover = document.getElementById('cover-undangan'); // Pastikan div cover Anda ber-id "cover-undangan"
-        if(cover) {
-            cover.style.opacity = '0';
-            setTimeout(() => {
-                cover.style.display = 'none';
-            }, 500);
-        }
-
-        // 3. Aktifkan kembali scroll halaman
-        document.documentElement.style.overflow = 'auto';
-        document.body.style.overflow = 'auto';
     
         img {
             max-width: 100%;
@@ -533,6 +521,20 @@
                 </div>
             </div>
             <button onclick="bukaUndangan()" class="btn">Buka Undangan</button>
+
+            // 2. Sembunyikan Cover / Sampul Depan agar Halaman 2 Terbuka
+        const cover = document.getElementById('top'); // Pastikan div cover Anda ber-id "top"
+        if(top) {
+            top.style.opacity = '0';
+            setTimeout(() => {
+                top.style.display = 'none';
+            }, 500);
+        }
+
+        // 3. Aktifkan kembali scroll halaman
+        document.documentElement.style.overflow = 'auto';
+        document.body.style.overflow = 'auto';
+            
             <p class="hero-signature">By : SelvStudio</p>
         </section>
 
