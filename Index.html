@@ -42,8 +42,7 @@
             font-family: 'Poppins', sans-serif;
             background: linear-gradient(180deg, #f3eee9 0%, #f7f3f1 100%);
             color: var(--text);
-            overflow: hidden; /* Scroll dimatikan di awal */
-            document.body.style.overflow = 'auto'; // Mengaktifkan scroll kembalidocument.body.style.overflow = 'auto'; // Mengaktifkan scroll kembali
+            overflow: hidden; /* Mencegah scroll di awal saat cover aktif */
             min-height: 100vh;
         }
 
@@ -522,8 +521,7 @@
                     <span class="label">Detik</span>
                 </div>
             </div>
-
-            <a href="#family" class="btn">Buka Undangan</a>
+            <a href="#" onclick="bukaUndangan(); return false;" class="btn">Buka Undangan</a>
             <p class="hero-signature">By : SelvStudio</p>
         </section>
 
