@@ -47,18 +47,18 @@
         body {
     overflow: hidden; /* Mengunci scroll di awal saat cover aktif */
 }
+        // 2. Sembunyikan Halaman Cover (Halaman 1)
         if (cover) {
             cover.style.opacity = '0';
             setTimeout(() => {
-                cover.style.display = 'none'; // Menghilangkan elemen cover sepenuhnya
+                cover.style.display = 'none'; // Cover benar-benar dihilangkan dari layar
             }, 500);
         }
 
-        // 3. Buka Kunci Scroll agar Halaman ke-2 Bisa Di-scroll
-        document.documentElement.style.overflow = 'auto';
+        // 3. Buka Kunci Scroll agar Halaman 2 dan Seterusnya Bisa Di-scroll
         document.body.style.overflow = 'auto';
     }
-            </script>
+</script>
     
         img {
             max-width: 100%;
