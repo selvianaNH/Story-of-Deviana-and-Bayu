@@ -43,10 +43,10 @@
             background: linear-gradient(180deg, #f3eee9 0%, #f7f3f1 100%);
             color: var(--text);
             min-height: 100vh;
+        
+    
+            overflow: hidden; /* Mengunci scroll di awal saat cover aktif */
         }
-        body {
-    overflow: hidden; /* Mengunci scroll di awal saat cover aktif */
-}
         // 2. Sembunyikan Halaman Cover (Halaman 1)
         if (cover) {
             cover.style.opacity = '0';
